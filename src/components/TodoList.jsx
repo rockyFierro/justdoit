@@ -3,8 +3,8 @@ import Todo from './Todo';
 
 const TodoList = props => {
     return (
-        <div>
-            <button onClick={props.clearFinished}>Clear Finished</button>
+        <div className="todoList">
+            {/* <button onClick={props.clearFinished}>Clear Finished</button> */}
             {console.log("src>comp>todolist>",props)}
             {props.tasks.map(
                 todo => {

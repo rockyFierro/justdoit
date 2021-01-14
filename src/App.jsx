@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
+import "./components/css/main.css"
 class App extends React.Component {
   constructor() {
     super()
@@ -52,9 +53,8 @@ class App extends React.Component {
     return (
       <div>
         <h2>Get it done!</h2>
-        <TodoForm addTask={this.addTask} />
+        <TodoForm addTask={this.addTask} clearFinished={this.clearFinished}/>
         <TodoList tasks={this.state.todos}
-          clearFinished={this.clearFinished}
           markFinished={this.markFinished} />
       </div>
     );
